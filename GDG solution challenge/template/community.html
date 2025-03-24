@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Swasthyam - Community</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+  <header>
+    <h1>Community & Support</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="{{ url_for('index') }}">Home</a></li>
+      <li><a href="{{ url_for('profile') }}">Health Profile</a></li>
+      <li><a href="{{ url_for('customization') }}">AI Customization</a></li>
+      <li><a href="{{ url_for('wellness') }}">Wellness Features</a></li>
+      <li><a href="{{ url_for('community') }}">Community</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h2>Real-Time Chat</h2>
+    <div id="chat-box">
+      {% for msg in messages %}
+      <p><strong>{{ msg['username'] }}:</strong> {{ msg['message'] }} <em>{{ msg['timestamp'] }}</em></p>
+      {% endfor %}
+    </div>
+    <form id="chat-form" action="{{ url_for('send_message') }}" method="post">
+      <input type="text" name="username" placeholder="Your name" required>
+      <input type="text" name="message" placeholder="Your message" required>
+      <button type="submit">Send</button>
+    </form>
+    <button id="refresh-chat" onclick="refreshChat()">Refresh Chat</button>
+  </main>
+  <footer>
+    <p>&copy; 2025 Swasthyam</p>
+  </footer>
+</body>
+</html>

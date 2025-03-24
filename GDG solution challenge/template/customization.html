@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Swasthyam - AI Customization</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>AI-Powered Customization</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="{{ url_for('index') }}">Home</a></li>
+      <li><a href="{{ url_for('profile') }}">Health Profile</a></li>
+      <li><a href="{{ url_for('customization') }}">AI Customization</a></li>
+      <li><a href="{{ url_for('wellness') }}">Wellness Features</a></li>
+      <li><a href="{{ url_for('community') }}">Community</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h2>Your Customized Wellness Plan</h2>
+    <section>
+      <h3>Customized Yoga Routine</h3>
+      <p>{{ yoga_routine }}</p>
+    </section>
+    <section>
+      <h3>Personalized Diet Plan</h3>
+      <p>{{ diet_plan }}</p>
+    </section>
+    <section>
+      <h3>Smart Reminders</h3>
+      <p>Remember to drink water regularly and take time for a wellness break!</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Swasthyam</p>
+  </footer>
+</body>
+</html>

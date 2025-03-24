@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Swasthyam - Holistic Wellness</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Holistic Wellness Features</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="{{ url_for('index') }}">Home</a></li>
+      <li><a href="{{ url_for('profile') }}">Health Profile</a></li>
+      <li><a href="{{ url_for('customization') }}">AI Customization</a></li>
+      <li><a href="{{ url_for('wellness') }}">Wellness Features</a></li>
+      <li><a href="{{ url_for('community') }}">Community</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h2>Mental Well-Being Support</h2>
+    <section>
+      <h3>Guided Meditation Session</h3>
+      <p>Close your eyes, take deep breaths, and let your mind go calm. Follow a simple meditation guide to unwind.</p>
+    </section>
+    <section>
+      <h3>Mindfulness Exercises</h3>
+      <p>Practice mindfulness by staying present in the moment. Be aware of your senses and your surroundings.</p>
+    </section>
+    <section>
+      <h3>Stress Management Techniques</h3>
+      <p>Engage in gentle yoga, breathing exercises, or a peaceful walk in nature to reduce stress.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Swasthyam</p>
+  </footer>
+</body>
+</html>

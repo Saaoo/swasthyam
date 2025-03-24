@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Swasthyam - Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Swasthyam</h1>
+    <p>Revolutionize your wellness journey with intelligent health management.</p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="{{ url_for('index') }}">Home</a></li>
+      <li><a href="{{ url_for('profile') }}">Health Profile</a></li>
+      <li><a href="{{ url_for('customization') }}">AI Customization</a></li>
+      <li><a href="{{ url_for('wellness') }}">Wellness Features</a></li>
+      <li><a href="{{ url_for('community') }}">Community</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section>
+      <h2>Comprehensive Health Tracking & Personalization</h2>
+      <p>Experience a revolutionary approach to wellness with Swasthyam's intelligent health management system.</p>
+      <ul>
+        <li><strong>Smart Health Profile:</strong> Record vital metrics, track conditions, set weight goals, and log additional health details.</li>
+        <li><strong>AI-Powered Customization:</strong> Personalized yoga routines, diet plans, and smart reminders.</li>
+        <li><strong>Holistic Wellness Features:</strong> Access guided meditation, mindfulness exercises, and stress management techniques.</li>
+        <li><strong>Community & Support:</strong> Connect with peers via progress sharing and real-time chat.</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Swasthyam</p>
+  </footer>
+</body>
+</html>

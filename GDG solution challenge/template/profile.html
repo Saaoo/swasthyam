@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Swasthyam - Health Profile</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Smart Health Profile</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="{{ url_for('index') }}">Home</a></li>
+      <li><a href="{{ url_for('profile') }}">Health Profile</a></li>
+      <li><a href="{{ url_for('customization') }}">AI Customization</a></li>
+      <li><a href="{{ url_for('wellness') }}">Wellness Features</a></li>
+      <li><a href="{{ url_for('community') }}">Community</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h2>Enter Your Health Metrics</h2>
+    <form action="{{ url_for('profile') }}" method="post">
+      <label for="weight">Weight (kg):</label>
+      <input type="number" step="any" name="weight" required>
+      <br>
+      <label for="height">Height (cm):</label>
+      <input type="number" step="any" name="height" required>
+      <br>
+      <label for="pulse_rate">Pulse Rate (bpm):</label>
+      <input type="number" name="pulse_rate" required>
+      <br>
+      <label for="blood_pressure">Blood Pressure:</label>
+      <input type="text" name="blood_pressure" placeholder="e.g., 120/80" required>
+      <br>
+      <label for="stress_levels">Stress Levels:</label>
+      <input type="text" name="stress_levels" placeholder="e.g., Moderate" required>
+      <br>
+      <label for="weight_management_goals">Weight Management Goals:</label>
+      <input type="text" name="weight_management_goals" placeholder="e.g., Lose 5 kg" required>
+      <br>
+      <label for="health_conditions">Health Conditions:</label>
+      <textarea name="health_conditions" placeholder="Detailed information about your health conditions"></textarea>
+      <br>
+      <button type="submit">Submit</button>
+    </form>
+
+    {% if profile %}
+    <section>
+      <h2>Your Latest Health Profile</h2>
+      <p><strong>Weight:</strong> {{ profile['weight'] }} kg</p>
+      <p><strong>Height:</strong> {{ profile['height'] }} cm</p>
+      <p><strong>Pulse Rate:</strong> {{ profile['pulse_rate'] }} bpm</p>
+      <p><strong>Blood Pressure:</strong> {{ profile['blood_pressure'] }}</p>
+      <p><strong>Stress Levels:</strong> {{ profile['stress_levels'] }}</p>
+      <p><strong>Weight Management Goals:</strong> {{ profile['weight_management_goals'] }}</p>
+      <p><strong>Health Conditions:</strong> {{ profile['health_conditions'] }}</p>
+    </section>
+    {% endif %}
+  </main>
+  <footer>
+    <p>&copy; 2025 Swasthyam</p>
+  </footer>
+</body>
+</html>
